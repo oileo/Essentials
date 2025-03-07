@@ -1,5 +1,9 @@
 # Essentials - A C Utility Library
 
+<div>
+   <img src="https://cdn.discordapp.com/attachments/1143230167607681096/1347360023583391868/Essentials.gif?ex=67cb8a4e&is=67ca38ce&hm=07ff511db6eb0371d2684f2e31bf62e31bb9e3a0e19d7b44feeea1e9a7f81c9e&" width="100%" />
+</div>
+
 ## 📌 About
 Essentials is a simple yet useful collection of utility functions written in C. It provides helpful string manipulation functions that can make handling C strings more intuitive. This library is open-source under the MIT license, so feel free to use and modify it. Just don't forget to credit the author! 😆
 
