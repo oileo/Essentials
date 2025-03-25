@@ -7,8 +7,8 @@
 ## 📌 About
 Essentials is a simple yet useful collection of utility functions written in C. It provides helpful string manipulation functions that can make handling C strings more intuitive. This library is open-source under the MIT license, so feel free to use and modify it. Just don't forget to credit the author! 😆
 
-**Author:** GlitchPalm (Leonardo Gonçalves)  
-**Version:** 0603  
+**Author:** Shinpi (Leonardo Gonçalves)  
+**Version:** 2  
 **Made in:** Brazil  
 
 ## 📥 Installation
@@ -22,7 +22,7 @@ To use Essentials in your project, you need both `essentials.h` and `essentials.
 
 ## 📖 Functions and Usage
 
-### 📌 length(s)
+### 📌 length(string)
 Returns the length of a given string (excluding the null terminator `\0`).
 
 #### Example:
@@ -46,7 +46,7 @@ printf("Hello, %s!\n", name);
 
 ---
 
-### 📌 indexof(s, letter)
+### 📌 indexof(string, letter)
 Finds the first occurrence of a character in a string and returns its index. Returns `-1` if not found.
 
 #### Example:
@@ -58,7 +58,7 @@ printf("Index of 'n': %d\n", index); // Output: 2
 
 ---
 
-### 📌 lastindexof(s, letter)
+### 📌 lastindexof(string, letter)
 Finds the last occurrence of a character in a string and returns its index. Returns `-1` if not found.
 
 #### Example:
@@ -70,7 +70,7 @@ printf("Last index of 'n': %d\n", index); // Output: 4
 
 ---
 
-### 📌 reverse(s, output)
+### 📌 reverse(string, output)
 Reverses a given string and stores it in `output`.
 
 #### Example:
@@ -83,7 +83,7 @@ printf("Reversed: %s\n", rev); // Output: olleH
 
 ---
 
-### 📌 substring(s, output, start, end)
+### 📌 substring(string, output, start, end)
 Extracts a substring from `s` starting at `start` and ending at `end`.
 
 #### Example:
@@ -96,15 +96,41 @@ printf("Substring: %s\n", sub); // Output: sent
 
 ---
 
-### 📌 trim(s, output)
+### 📌 trim(string, output)
 Removes leading and trailing spaces from a string.
 
 #### Example:
 ```c
-char str[] = "   Hello, World!   ";
+char str[] = "Hello, World!";
 char trimmed[50];
 trim(str, trimmed);
 printf("Trimmed: '%s'\n", trimmed); // Output: 'Hello, World!'
+```
+
+---
+
+### 📌 replaceChar(string, char, charToReplace)
+Change a specific character in a string.
+
+#### Example:
+```c
+char str[] = "Hello, World!";
+replaceChar(str, 'e', 'a');
+printf("Message: '%s'\n", str); // Output: 'Hallo, World!'
+```
+
+---
+
+### 📌 includes(string, stringToFind)
+Verify if a string have a other string inside.
+
+#### Example:
+```c
+char str[] = "Hello, World!";
+
+if(includes(str, "Hello") == 1) { // Verify if exist : Return 0 if not exist.
+	// Code to execute
+}
 ```
 
 ---

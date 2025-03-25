@@ -11,8 +11,8 @@
 
 	Check the Doc and learn how to use : https://github.com/oileo/Essentials
 	
-	Made by GlitchPalm (Leonardo Gonçalves)
-	Version : 0603
+	Made by Shinpi (Leonardo Gonçalves)
+	Version : 2
 
 	Made in Brazil
 */
@@ -131,3 +131,41 @@ void trim(char s[], char output[])
 		output[j-1] = '\0';
 	} else output[j] = '\0';
 }
+
+void replaceChar(char s[], char letter, char rletter)
+{
+	int _l = 0;
+
+	while(_l < length(s)) {
+		++_l;
+		if(s[_l] == letter) {
+			s[_l] = rletter;
+		}
+	}
+}
+
+int includes(char s[], char word[])
+{
+	int h = 0;
+	int count = 0;
+	int count1 = -1;
+
+	while(count < length(s)) {
+		if(count1 > -1 && count1 < length(word)) ++count1;
+		if(s[count] == word[0]) {
+			h = 1;
+			++count1;
+		}
+
+		if(s[count] != word[count1]) {
+			if(word[count1] != '\0') {
+				h = 0;				
+			}
+		}
+
+		++count;
+	}
+	
+	return h;
+}
+
