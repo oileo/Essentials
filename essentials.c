@@ -169,7 +169,7 @@ int includes(char s[], char word[])
 	return h;
 }
 
-void bubbleSort(int arr[], int n, int crescente) {
+void bubbleSort(int arr[], int n, int val) {
     int i, j, temp, swapped;
 
     for (i = 0; i < n - 1; i++) {
